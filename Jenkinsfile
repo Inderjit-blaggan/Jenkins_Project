@@ -20,5 +20,18 @@ pipeline {
     
     
     }
+    post{
+        always{
+            echo " this is executed every time"
+        }
+        success{
+            echo " Congratulations build is successful"
+        }    
+        failure{
+            echo "Please check the logs build encounted a failure"
+        }
+    
+    }    
+        
 
 }
