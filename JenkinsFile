@@ -1,12 +1,25 @@
 pipeline {
     agent any
-
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Blaggan Says hello to Jenkins pipeline'
+    
+    stages{
+        
+        stage('build')
+        {
+            steps{
+                    echo 'building the application'
             }
+            
         }
+        stage('artifact')
+        {
+            steps{
+                    echo 'Artifacting the application'
+            }
+            
+        }
+    
+    
     }
+
 }
 
